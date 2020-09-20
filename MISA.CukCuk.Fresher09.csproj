@@ -5,11 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\content\img\" />
     <Folder Include="wwwroot\content\icon\" />
-    <Folder Include="wwwroot\content\fonts\" />
+    <Folder Include="wwwroot\css\common\" />
     <Folder Include="wwwroot\js\" />
-    <Folder Include="wwwroot\page\category\report\" />
+    <Folder Include="wwwroot\page\report\" />
   </ItemGroup>
 
 

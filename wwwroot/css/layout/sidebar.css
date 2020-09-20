@@ -1,0 +1,52 @@
+﻿.sidebar {
+    float:left;
+    width: 200px;
+    background-color: #0973b9 !important;
+    height: 100vh;
+}
+    .sidebar .logo {
+        display: flex;
+        width: 100%;
+        height: 50px;
+        background-color: #0973b9;
+    }
+    .sidebar .menu {
+        width: 100%;
+        height: calc(100% - 50px);
+        background-color: #0973b9;
+    }
+.logo .icon-left-header {
+    width: 25px;
+    height: 100%;
+    background-image: url('file:///D:\Project VS2019\MISA.CukCuk.Fresher09\MISA.CukCuk.Fresher09\wwwroot\content\img\icon-left-header.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.logo .logo-text {
+    width: 100%;
+    height: 100%;
+    background-image: url('file:///D:\Project VS2019\MISA.CukCuk.Fresher09\MISA.CukCuk.Fresher09\wwwroot\content\img\logo-text.png');
+    background-repeat: no-repeat;
+    background-position-y: 12px;
+    background-position-x: center;
+}
+/*Menu*/
+.menu .menu-item{
+    display:flex;
+    width:100%;
+    height:40px;
+    border-top: 1px solid #0c6aa8;
+    border-bottom: 1px solid #5ea7d8;
+}
+.menu .menu-item-icon {
+    width: 25px;
+    height: 25px;
+    background-image: url('file:///D:\Project VS2019\MISA.CukCuk.Fresher09\MISA.CukCuk.Fresher09\wwwroot\content\img\iconMenu.png');
+    background-repeat: no-repeat;
+    margin-left:10px;
+    background-position-y:-118px;
+}
+.menu .menu-item-text{
+    color:#ffffff;
+    margin-left:8px;
+}
