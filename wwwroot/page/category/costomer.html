@@ -4,8 +4,11 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=8" />
     <title></title>
-    <link href="/css/layout/sidebar.css" rel="stylesheet" />
-    <link href="/css/layout/main.css" rel="stylesheet" />
+    <link href="../../css/layout/sidebar.css" rel="stylesheet" />
+    <link href="../../css/layout/main.css" rel="stylesheet" />
+    <link href="../../css/layout/toolbar.css" rel="stylesheet" />
+    <link href="../../css/layout/grid.css" rel="stylesheet" />
+    <link href="../../css/layout/button.css" rel="stylesheet" />
 </head>
 <body style="margin:0px">
     <div class="sidebar">
@@ -15,19 +18,171 @@
         </div>
         <div class="menu">
             <div class="menu-item">
-                <div class="menu-item-icon"></div>
+                <div class="menu-item-icon1"></div>
                 <div class="menu-item-text">Tổng quan</div>
             </div>
-            <div class="menu-item"></div>
-            <div class="menu-item"></div>
-            <div class="menu-item"></div>
-            <div class="menu-item"></div>
+            <div class="menu-item">
+                <div class="menu-item-icon2"></div>
+                <div class="menu-item-text">Báo cáo</div>
+                <div class="menu-item-add"></div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-icon3"></div>
+                <div class="menu-item-text">Mua hàng</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-icon4"></div>
+                <div class="menu-item-text">Kho</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-icon5"></div>
+                <div class="menu-item-text">Quỹ tiền mặt</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-icon6"></div>
+                <div class="menu-item-text">Quỹ tiền gửi</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-icon7" ></div>
+                <div class="menu-item-text">Chi phí</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-icon8"></div>
+                <div class="menu-item-text">Khuyến mại</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-icon9"></div>
+                <div class="menu-item-text">Thực đơn</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-icon10"></div>
+                <div class="menu-item-text">Danh mục</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-icon11"></div>
+                <div class="menu-item-text">Huỷ hoá đơn</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-icon12"></div>
+                <div class="menu-item-text">Thiết lập hệ thống</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-icon13"></div>
+                <div class="menu-item-text">Ứng dụng</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-icon14"></div>
+                <div class="menu-item-text">Bán hàng online</div>
+                <div class="menu-item-new"></div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-icon15"></div>
+                <div class="menu-item-text">5Food</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-icon16"></div>
+                <div class="menu-item-text">Trợ giúp</div>
+                <div class="menu-item-addhelp"></div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-icon17"></div>
+                <div class="menu-item-text">Thuê bao</div>
+            </div>
         </div>
     </div>
 
     <div class="main">
-        <div class="header"> </div>
-        <div class="content"> conten</div>
+        <div class="header">
+            <div >
+                <select class="select-restaurant">
+                    <option>Nhà hàng Biển Đông</option>
+                    <option>Nhà hàng Biển Nam</option>
+                </select>
+            </div>
+             <div>
+                 <select class="select-language">
+                     <option>Tiếng Việt(Tiếng Việt) </option>
+                     <option>Tiếng Anh(English) </option>
+                     <option>Tiếng Nhật(Japanese) </option>
+                 </select>
+             </div>
+            <div class="notification"> 
+                <i class="fa fa-globe" aria-hidden="true"></i>
+            </div>
+            <div class="call"></div>
+            <div class="acount"></div>
+        </div>
+        
+        <div class="content">
+            <div class="content-header">Danh mục > Khách hàng</div>
+            <div class="content-body">
+                <!-- Toolbar-->
+                <div class="toolbar">
+                    <button >
+                        <div class="btn-icon btn-icon-add"></div>
+                        <div class="btn-text">Thêm</div>
+                    </button>
+                    <button disabled >
+                        <div class="btn-icon btn-icon-duplicate"></div>
+                        <div class="btn-text">Nhân bản</div>
+                    </button>
+                    <button >
+                        <div class="btn-icon btn-icon-edit"></div>
+                        <div class="btn-text">Sửa</div>
+                    </button>
+                    <button >
+                        <div class="btn-icon btn-icon-delete"></div>
+                        <div class="btn-text">Xoá</div>
+                    </button>
+                    <button >
+                        <div class="btn-icon btn-icon-refresh"></div>
+                        <div class="btn-text">Nạp</div>
+                    </button>
+                </div>
+                <!-- Grid -->
+                <div class="grid">
+                    <table width="100%" border="1">
+                            <thead>
+                                <tr>
+                                    <th width="200px">Mã khách hàng</th>
+                                    <th width="200px">Tên khách hàng</th>
+                                    <th width="100px"> Ngày sinh</th>
+                                    <th>Số điện thoại</th>
+                                    <th>Số tiền nợ</th>
+                                    <th>Là thành viên 5Food</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>KH00002</td>
+                                    <td>Đàm Văn Nhật</td>
+                                    <td>20/05/1997</td>
+                                    <td>0392856231</td>
+                                    <td>10000</td>
+                                    <td><input type="checkbox" /></td>
+                                </tr>
+                                <tr>
+                                    <td>KH00003</td>
+                                    <td>Lê Văn Anh</td>
+                                    <td>20/05/1997</td>
+                                    <td>0392856231</td>
+                                    <td>10000</td>
+                                    <td><input type="checkbox" checked/></td>
+                                </tr>
+                                <tr>
+                                    <td>KH00004</td>
+                                    <td>Nguyễn Văn Hoà</td>
+                                    <td>20/05/1997</td>
+                                    <td>0392856231</td>
+                                    <td>10000</td>
+                                    <td><input type="checkbox" checked/></td>
+                                </tr>
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+            
+        </div>
     </div>
 </body>
 </html>

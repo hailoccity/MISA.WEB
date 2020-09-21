@@ -1,0 +1,21 @@
+.grid{
+    width: 100%;
+    height: calc(100% - 50px);
+    border: 1px solid #ccc;
+    border-top: none;
+    border-bottom: none;
+}
+table{
+    border:none;
+    border-collapse: collapse;
+    border-color: #ccc;
+ 
+}
+    table thead{
+        border-top: none;
+        background: #ededed;
+    }
+table tr td{
+    padding: 2px 4px;
+    border: 1px solid #ccc;
+}
