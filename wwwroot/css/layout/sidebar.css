@@ -1,5 +1,6 @@
 ﻿.sidebar {
     float:left;
+    display: inline;
     width: 200px;
     background-color: #0973b9 !important;
     height: 100vh;

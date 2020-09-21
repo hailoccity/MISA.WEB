@@ -51,7 +51,7 @@
    
      width: 200px;
      height:30px;
-     background-color:#0973b9;
+     background-color:#0a6cad;
      color:#ffff;
      border:none;
      
@@ -59,7 +59,7 @@
  .header .select-language{
     width: 200px;
     height:30px;
-    background-color:#0973b9;
+    background-color:#0a6cad;
     color:#ffff;
     border:none;
     
@@ -90,3 +90,6 @@
      height: calc(100% - 40px);
      width: 100%;
  }
+.header .notification{
+    background-color: #0973b9;
+}

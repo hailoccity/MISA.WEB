@@ -9,6 +9,9 @@
     <link href="../../css/layout/toolbar.css" rel="stylesheet" />
     <link href="../../css/layout/grid.css" rel="stylesheet" />
     <link href="../../css/layout/button.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="../../css/layout/dialog.css" rel="stylesheet" />
+    
 </head>
 <body style="margin:0px">
     <div class="sidebar">
@@ -107,7 +110,7 @@
                  </select>
              </div>
             <div class="notification"> 
-                <i class="fa fa-globe" aria-hidden="true"></i>
+                <i class="fa fa-globe" style="font-size: 30px;color:#fff"></i>
             </div>
             <div class="call"></div>
             <div class="acount"></div>
@@ -155,33 +158,67 @@
                             <tbody>
                                 <tr>
                                     <td>KH00002</td>
-                                    <td>Đàm Văn Nhật</td>
+                                    <td class="text-left">Đàm Văn Nhật</td>
                                     <td>20/05/1997</td>
-                                    <td>0392856231</td>
+                                    <td class="text-center">0392856231</td>
                                     <td>10000</td>
-                                    <td><input type="checkbox" /></td>
+                                    <td class="text-center"><input type="checkbox" /></td>
                                 </tr>
                                 <tr>
                                     <td>KH00003</td>
-                                    <td>Lê Văn Anh</td>
+                                    <td class="text-left">Lê Văn Anh</td>
                                     <td>20/05/1997</td>
-                                    <td>0392856231</td>
+                                    <td class="text-center">0392856231</td>
                                     <td>10000</td>
-                                    <td><input type="checkbox" checked/></td>
+                                    <td class="text-center"><input type="checkbox" checked/></td>
+                                </tr>
+                                <tr>
+                                    <td>KH00003</td>
+                                    <td class="text-left">Lê Văn Anh</td>
+                                    <td>20/05/1997</td>
+                                    <td class="text-center">0392856231</td>
+                                    <td>10000</td>
+                                    <td class="text-center"><input type="checkbox" checked/></td>
+                                </tr>
+                                <tr>
+                                    <td>KH00003</td>
+                                    <td class="text-left">Lê Văn Anh</td>
+                                    <td>20/05/1997</td>
+                                    <td class="text-center">0392856231</td>
+                                    <td>10000</td>
+                                    <td class="text-center"><input type="checkbox" checked/></td>
+                                </tr>
+                                <tr>
+                                    <td>KH00003</td>
+                                    <td class="text-left">Lê Văn Anh</td>
+                                    <td>20/05/1997</td>
+                                    <td class="text-center">0392856231</td>
+                                    <td>10000</td>
+                                    <td class="text-center"><input type="checkbox" checked/></td>
                                 </tr>
                                 <tr>
                                     <td>KH00004</td>
-                                    <td>Nguyễn Văn Hoà</td>
+                                    <td class="text-left">Nguyễn Văn Hoà</td>
                                     <td>20/05/1997</td>
-                                    <td>0392856231</td>
-                                    <td>10000</td>
-                                    <td><input type="checkbox" checked/></td>
+                                    <td class="text-center">0392856231</td>
+                                    <td >10000</td>
+                                    <td class="text-center"><input type="checkbox" checked/></td>
                                 </tr>
                             </tbody>
                     </table>
                 </div>
             </div>
             
+        </div>
+    </div>
+    <div class="form-dialog">
+        <div class="dialog-modal"></div>
+        <div class="dialog">
+            <div class="dialog-titlebar">
+                <div class="title">Khách hàng</div>
+                <div class="btn-close">x</div>
+            </div>
+            <div class="dialog-body"></div>
         </div>
     </div>
 </body>
