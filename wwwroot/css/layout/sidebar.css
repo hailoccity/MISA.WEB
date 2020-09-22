@@ -147,7 +147,7 @@
     background-position-y: -233px;
 }
 
-.menu .menu-item-icon15{
+.menu .menu-item-icon13{
     width: 25px;
     height: 25px;
     background-image: url('../../content/img/logo_5Food.png');
@@ -155,15 +155,15 @@
     margin-left:15px;
     align-self: center;
 }
-.menu .menu-item-icon16{
+.menu .menu-item-icon14{
     width: 25px;
     height: 25px;
     background-image: url('../../content/img/iconHelp.png');
     background-repeat: no-repeat;
     margin-left:15px;
-    align-self: center;
+    margin-top: 7px;
 }
-.menu .menu-item-icon17{
+.menu .menu-item-icon15{
     width: 25px;
     height: 25px;
     background-image: url('../../content/img/icon-subscriber.png');
@@ -184,6 +184,7 @@
     margin-left: 72px;
     align-self: center;
     background-position-y: -270px;
+    cursor: pointer;
 }
 .menu .menu-item-addhelp{
     width: 25px;
@@ -193,6 +194,7 @@
     margin-left: 72px;
     align-self: center;
     background-position-y: -270px;
+    cursor: pointer;
 }
 .menu .menu-item:hover{
     background-color: rgb(226, 104, 47);

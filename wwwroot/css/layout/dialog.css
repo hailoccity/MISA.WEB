@@ -34,7 +34,7 @@
     
     line-height: 25px;
     float: left;
-    padding: 4px;
+    padding-left: 4px;
 
 }
 .dialog .dialog-titlebar .btn-close{
@@ -53,5 +53,68 @@
 
 .dialog .dialog-body{
     width: 100%;
-    border: 1px solid #000;;
+    padding: 8px;
+}
+.dialog-body label{
+    display: inline-block;    
+    width: 130px;
+    
+}
+.dialog-body .row{
+    margin:6px;
+}
+
+.dialog-body .dialog-footer{
+    display: flex;
+    padding:8px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    border: 1px solid #ccc;
+    background-color: rgb(238, 245, 245);
+
+}
+.dialog .dialog-footer .footer-left{
+    
+    position: relative;
+    left: 0;
+    
+}
+
+.dialog .dialog-footer .footer-right{
+    position: absolute;
+    right: 0;
+}
+.btn-dialog .btn-icon-footer { 
+    width: 16px;
+    height: 16px;
+    background-image: url('../../content/img/IconSprite.png');
+    margin: 4px;
+    
+}
+.btn-dialog .btn-icon-help{
+    background-position: 0px -1599px;
+}
+.btn-dialog .btn-icon-cut{
+    background-position:0px -768px;
+}
+.btn-dialog .btn-icon-cutAdd{
+    background-position:0px -737px;
+}
+.btn-dialog .btn-icon-close{
+    background-position:0px -1967px;
+}
+.footer-left  button{
+    display: flex;
+}
+.footer-right button{
+    display: flex;
+}
+.footer-right{
+    display: flex;
+}
+.btn-dialog .btn-text{
+    margin:5px;
 }
