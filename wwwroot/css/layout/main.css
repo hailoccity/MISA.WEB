@@ -57,10 +57,10 @@
 
  }
  .notification .number-notification{
-     width: 23px;
-     height: 23px;
+     width: 18px;
+     height: 18px;
      background-color: rgb(255, 0, 16);
-    margin-left: 15px;
+    margin-left: 19px;
     margin-top: -35px;
     text-align: center;
     display: inline-table;
