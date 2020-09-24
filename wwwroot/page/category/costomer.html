@@ -121,23 +121,23 @@
             <div class="content-body">
                 <!-- Toolbar-->
                 <div class="toolbar">
-                    <button >
+                    <button id="btnAdd" >
                         <div class="btn-icon btn-icon-add"></div>
                         <div class="btn-text">Thêm</div>
                     </button>
-                    <button disabled >
+                    <button id="btnDuplicate" disabled >
                         <div class="btn-icon btn-icon-duplicate"></div>
                         <div class="btn-text">Nhân bản</div>
                     </button>
-                    <button >
+                    <button id="btnEdit">
                         <div class="btn-icon btn-icon-edit"></div>
                         <div class="btn-text">Sửa</div>
                     </button>
-                    <button >
+                    <button id="btnDelete">
                         <div class="btn-icon btn-icon-delete"></div>
                         <div class="btn-text">Xoá</div>
                     </button>
-                    <button >
+                    <button id="btnRefresh" >
                         <div class="btn-icon btn-icon-refresh"></div>
                         <div class="btn-text">Nạp</div>
                     </button>
@@ -213,23 +213,22 @@
         </div>
     </div>
     <!--Form thong tin chi tiet khach hang-->
-    <div class="form-dialog" style="display: none;">
+    <div id="frDialog" class="form-dialog" style="display: none;">
         <div class="dialog-modal"></div>
         <div class="dialog">
             <div class="dialog-titlebar">
                 <div class="title">Khách hàng</div>
-                <div class="btn-close" onclick="colseDialog()">x</div>
+                <div id="btnCloseX" class="btn-close">x</div>
             </div>
             <div class="dialog-body">
                 <div class="row"> 
                     <label>Tên khách hàng  <span style="color: brown;">(*)</span></label>
                     <input id="txtCustomerName" type="text">
+                    
+                </div>
+                <div class="row">
                     <label>Mã Khách hàng  <span style="color: brown;">(*)</span></label>
                     <input id="txtCustomerCode" type="text">
-                </div>
-                <div class="row"> 
-                    <label>Tên khách hàng</label>
-                    <input id="txtCusomerName" type="text">
                 </div>
                 <div class="row"> 
                     <label>Ngày sinh</label>
@@ -248,10 +247,6 @@
                     <input id="check5Food" type="checkbox">
                 </div>
                 <br>
-                <div class="row">
-                    <label>Ghi chú</label>
-                    <input id="note" type="text" style="width: 430px;height: 30px;">
-                </div>
                 
                 <div class="dialog-footer">
                     <div class="footer-left">
@@ -262,7 +257,7 @@
                     </div>
                     <div class="footer-right">
                         
-                        <button class="btn-dialog">
+                        <button id="btnSave" class="btn-dialog">
                             <div class="btn-icon-footer btn-icon-cut"></div>
                             <div class="btn-text">Cất</div>
                         </button>
@@ -270,7 +265,7 @@
                             <div class="btn-icon-footer btn-icon-cutAdd"></div>
                             <div class="btn-text">Cất & Thêm</div>
                         </button>
-                        <button class="btn-dialog">
+                        <button id="btnClose" class="btn-dialog">
                             <div class="btn-icon-footer btn-icon-close"></div>
                             <div class="btn-text">Đóng</div>
                         </button>
@@ -280,14 +275,7 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript">
-        function showDialog(){
-    document.getElementsByClassName("form-dialog")[0].style.display="block";
-}
-        function colseDialog(){
-    document.getElementsByClassName("form-dialog")[0].style.display="none"
-}
-    </script>
+    
     <script src="../../js/lib/jQuery-3.5.1.min.js"></script>
     <script src="../../js/page/customer.js"></script>
     <script src="../../js/helps/common.js"></script>
