@@ -3,6 +3,7 @@
     height: calc(100% - 50px);
     border: 1px solid #ccc;
     border-top: none;
+  
     
 }
 table{
@@ -11,13 +12,17 @@ table{
     border-color: #ccc;
  
 }
-    table thead{
+table thead{
         border-top: none;
         background: #ededed;
     }
 table tr td{
     padding: 2px 4px;
     border: 1px solid #ccc;
+
+}
+table tr:hover{
+    background-color: rgb(120, 184, 236);
 }
 .text-center{
     text-align:center ;
