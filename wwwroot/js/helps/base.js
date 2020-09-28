@@ -1,6 +1,6 @@
 $(document).ready(function (){
     try {
-        customerJs = new CustomerJS();
+        baseJs = new BaseJS();
     } catch (error) {
         
     }
@@ -10,10 +10,11 @@ $(document).ready(function (){
 /**
  * Class quản lý các sự kiện cho trang customer
  */
-class CustomerJS{
+class BaseJS{
     constructor(){
         // gán sự kiện
         try {
+            this.getData();
             this.loadData();
             this.initEvent();
            
@@ -23,30 +24,29 @@ class CustomerJS{
  
         
     }
+    getData(){
+        this.Data=[];
+    }
   /**
  * Load du lieu
  * 
  */
  loadData(){
      try {
-        $('table#tblistCustomer tbody').empty();
-        //lay du lieu ve
-        var Data = data;
-        $.each(data,function(index, item){
-            var CustomerInfoHTML =
-            `<tr>
-            <td>`+item['CustomerCode']+`</td>
-            <td class="text-left">`+item['CustomerName']+`</td>
-            <td>`+item['BirthDay']+`</td>
-            <td class="text-center">`+item['PhoneOfNumber']+`</td>
-            <td>`+commonJS.formatMoney(item['DebitAmount'])+`</td>
-            <td class="text-center">`+commonJS.buildCheckBoxByValue(item['Is5FoodMember'])+`</td>
-          </tr>`;
-            
-          $('table#tblistCustomer tbody').append(CustomerInfoHTML);
-      
-            debugger;
+         // Đọc thông tin từ các cột dũ liệu
+        var data = this.Data;
+        var fields = $(`table#tblistCustomer thead th`);
+        $each(data , function(index, obj){
+            var tr = $(`<tr></tr>`);
+            $.each(fields,function(index, field){
+                var fieldName = $(field).attr(`fieldName`);
+                var value = obj[fieldName];
+                var td = $(`<td>`+ value +`</td>`);
+                $(tr).append(td);
+            })
+            $('table#tblistCustomer tbody').append(tr);
         })
+        
      } catch (error) {
          
      }
@@ -109,7 +109,7 @@ saveData(){
     }
    
 // lưu vào database
-    data.push(custumer);
+    fakeData.push(custumer);
 // Hiển thị thông báo thành công
     alert("Thêm thành công");
 //đóng form
@@ -127,31 +127,12 @@ var data = [
         CustomerName: "Le Doan Hieu",
         DateOfBirth: new Date(1997,5,2),
         Mobile: "0392856231",
-        DebiMoney: 1000000,
+        DebitMoney: 1000000,
         IsMember5Food: true
 
     },
     
-    {
-        CustomerCode: "KH001",
-        CustomerName: "Le Doan Hieu",
-        DateOfBirth: new Date(1997,5,2),
-        Mobile: "0392856231",
-        DebiMoney: 1000000,
-        IsMember5Food: true
-
-    },
-    {
-        CustomerCode: "KH001",
-        CustomerName: "Le Doan Hieu",
-        DateOfBirth: new Date(1997,5,2),
-        Mobile: "0392856231",
-        DebiMoney: 1000000,
-        IsMember5Food: true
-
-    },
    
-    
 
 
 ]

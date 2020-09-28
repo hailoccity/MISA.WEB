@@ -1,3 +1,4 @@
+// ham dung chung 
 var commonJS= {
     formatMoney(money){
         return money.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g,'$1.');
@@ -11,4 +12,11 @@ var commonJS= {
         return checkBoxHTML[0].outerHTML;
     }
 
+}
+/**
+ * các đối tượng sử dụng chung
+ * 
+ */
+Number.prototype.formatMoney = function(){;
+    return this.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g,'$1.')
 }
