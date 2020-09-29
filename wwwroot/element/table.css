@@ -2,9 +2,7 @@ table{
 
 }
 table tr.row-selected{
-<<<<<<< HEAD
+
     background-color: rgb(107, 241, 152);
-=======
-    background-color: rgb(201, 231, 171);
->>>>>>> 27ed1f96f83e37836fdb9d590666be39e9faaba7
+
 }

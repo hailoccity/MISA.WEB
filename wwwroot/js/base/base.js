@@ -1,76 +1,101 @@
 $(document).ready(function (){
+    try {
+        baseJs = new BaseJS();
+    } catch (error) {
+        
+    }
     //load du lieu
-    customerJs = new CustomerJS();
+
 });
 /**
+ * Class quản lý các sự kiện cho trang customer
+ */
+class BaseJS{
+    constructor(){
+
+        // gán sự kiện
+        try {
+            this.getData();
+            this.loadData();
+            this.initEvent();
+           
+        } catch (error) {
+            
+        }
+
+    }
+    getData(){
+        this.Data = [];
+    }
+
+  /**
  * Load du lieu
  * 
  */
-class CustomerJS{
-    constructor(){
-        this.getData();
-        this.loadData();
-        // gán sự kiện
-        $("#btnAdd").click(function(){
-            $("#frDialog").show();
-        })
-        $("#btnClose").click(function(){
-            $("#frDialog").hide();
-        
-        })
-        $("#btnCloseX").click(function(){
-            $("#frDialog").hide();
-        
-        })
-        $('tr').click(function(){
-            
-        })
-        // bao hàm tất cả các thẻ được bao
-        $('#tblistCustomer').on('click','tr',this.rowOnclick)
-            //todo
-        
-        $("#btnRefresh").click(this.loadData.bind(this));
-
-        $("#btnSave").click(this.saveData.bind(this));
-    }
-  
  loadData(){
      try {
-        $('table#tblistCustomer tbody').empty();
-        //lay du lieu ve
-        var data = fakeData;
-        $.each(this.Data,function(index, item){
-            var CustomerInfoHTML =
-            `<tr>
-            <td>`+item['CustomerCode']+`</td>
-            <td class="text-left">`+item['CustomerName']+`</td>
-            <td>`+item['BirthDay']+`</td>
-            <td class="text-center">`+item['PhoneOfNumber']+`</td>
-            <td>`+commonJS.formatMoney(item['DebitAmount'])+`</td>
-            <td class="text-center">`+commonJS.buildCheckBoxByValue(item['Is5FoodMember'])+`</td>
-          </tr>`;
+         debugger;
+        //$('table#tblistCustomer tbody').empty();
+        // Đọc thông tin các cột dữ liệu
+        var fields = $("table#tblistCustomer thead th");
+        var data = this.Data;
+        $.each(data,function(index, obj){
+            var tr =$(`<tr></tr>`);
+            $.each(fields,function(index,field) {
+                var fieldName =$(field).attr('fieldName');
+                var value = obj[fieldName];
+                var td = $(`<td>`+ value + `</td>`);
+                $(tr).append(td);
+            })
             
-          $('table#tblistCustomer tbody').append(CustomerInfoHTML);
-      
-   
+          $("#tblistCustomer tbody").append(tr);
+            
+        
         })
      } catch (error) {
          
      }
-
     
+     
 }
+/**
+ * Gán sự kiện cho các thành phần
+ * Create by Hieu
+ */
+initEvent(){
+    $("#btnAdd").click(function(){
+        $("#frDialog").show();
+    })
+    $("#btnClose").click(function(){
+        $("#frDialog").hide();
+    
+    })
+    $("#btnCloseX").click(function(){
+        $("#frDialog").hide();
+    
+    })
 
-getData(){
-    this.Data = [];
+    // bao hàm tất cả các thẻ được bao
+    $('table#tblistCustomer').on('click','tr',this.rowOnclick);
+              
+    $('#btnRefresh').click(this.btnReloadData.bind(this));
+    
+    $("#btnRefresh").click(this.loadData.bind(this));
+
+    //$("#btnSave").click(this.saveData.bind(this));
+
 }
 rowOnclick(){
-  
+    $(this).siblings().removeClass('row-selected');
+    $(this).addClass('row-selected');
 }
-btnloadData(){
 
+btnReloadData(){
+    this.loadData();
 }
-//
+}
+
+/*
 saveData(){
     //luu dữ liệu
     var customerName = $("#txtCustomerName").val(),
@@ -78,50 +103,50 @@ saveData(){
     birthday =$("#dtBirth").val(),
     mobile= $("#txtMobile").val(),
     debitAmount =$("#txtDebiAmount").val(),
-    check5food =$("#check5Food").is(':checked')
+    check5food =$("#check5Food").is(':checked');
+
+    if(customerName == "" || customerName == null){
+        alert("Không được để trống phần tên !!!!!");
+        return false;
+    
+    } 
+    
+
 // từ dữ liệu thu thập được
     var custumer = {
         CustomerCode: customerCode,
         CustomerName: customerName,
-        BirthDay: new Date(birthday),
-        PhoneOfNumber: mobile,
-        DebitAmount: debitAmount,
-        Is5FoodMember: check5food
+        DateOfBirth: new Date(birthday),
+        Mobile: mobile,
+        DebitMoney: debitAmount,
+        IsMember5Food: check5food,
     }
    
 // lưu vào database
-    fakeData.push(custumer);
+    data.push(custumer);
 // Hiển thị thông báo thành công
     alert("Thêm thành công");
 //đóng form
     $("#frDialog").hide();
 //load lại dữ liệu
     this.loadData();
-    debugger;
+    this.loadDataForm();
+    //debugger;
 }
+// delete on form
+loadDataForm(){
+    var customerName = $("#txtCustomerName").val(""),
+        customerCode= $("#txtCustomerCode").val(""),
+        birthday =  $("#dtBirth").val(""),
+        mobile= $("#txtMobile").val(""),
+        debitAmount =$("#txtDebiAmount").val(""),
+        check5food =$("#check5Food").prop('checked',false)
+    
+
 }
+*/
+
+
+
 //Dinh dang hien thi tien
 
-var fakeData = [
-    {
-        CustomerCode: "KH001",
-        CustomerName: "Le Doan Hieu",
-        BirthDay: new Date(1997,5,2),
-        PhoneOfNumber: "0392856231",
-        DebitAmount: 1000000,
-        Is5FoodMember: true
-
-    },
-    
-    {
-        CustomerCode: "KH002",
-        CustomerName: "Le Van Dong",
-        BirthDay: new Date(1997,5,2),
-        PhoneOfNumber: "0392856231",
-        DebitAmount: 1000000,
-        Is5FoodMember: false
-
-    },
-
-
-]
