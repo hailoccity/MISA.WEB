@@ -122,7 +122,7 @@
         </div>
         
         <div class="content">
-            <div class="content-header">Danh mục > Khách hàng</div>
+            <div class="content-header">Danh mục > Nhân viên</div>
             <div class="content-body">
                 <!-- Toolbar-->
                 <div class="toolbar">
@@ -152,30 +152,48 @@
                     <table id="tblistCustomer" width="100%" border="1">
                             <thead>
                                 <tr>
-                                    <th width="200px">Mã nhân viên</th>
-                                    <th width="200px">Tên nhân viên</th>
-                                    <th width="100px"> Giới tính</th>
-                                    <th>Ngày sinh</th>
-                                    <th>Số điện thoại</th>
-                                    <th>Mức lương</th>
+                                    <th fieldName = "EmployeeCode">Mã nhân viên</th>
+                                    <th fieldName ="EmployeeName" style="width: 150px;">Tên nhân viên</th>
+                                    <th fieldName ="Gender"> Giới tính</th>
+                                    <th fieldName = "DateOfBirth">Ngày sinh</th>
+                                    <th fieldName ="Mobile">Số điện thoại</th>
+                                    <th fieldName ="Email">Email</th>
+                                    <th fieldName ="Salary">Mức lương</th>
+                                    <th fieldName = "Level">Cấp bực</th>
+                                    <th fieldName ="WorkStatus" style="text-align: center;">Tình trạng công việc</th>
                                 </tr>
                             </thead>
                             <tbody>
 
-                                <tr class="btnTr">
-                                    <td>KH00003</td>
-                                    <td class="text-left">Lê Văn Anh</td>
-                                    <td>Nam</td>
-                                    <td>20/05/1997</td>
-                                    <td class="text-center">0392856231</td>
-                                    <td>100000000</td>
-                                   
-                                </tr>
-                               
-                                
                             </tbody>
                     </table>
                   
+                </div>
+                <div class="footter">
+                    <div class="page-first">
+                        <img src="../../content/img/grid/page-first.png" style="cursor: pointer;">
+                    </div>
+                    <div class="page-prev">
+                        <img src="../../content/img/grid/page-prev.png" style="margin-left: 20px; cursor: pointer;">
+                    </div>
+                    <div class="load-page" style="margin-left: 30px;">
+                        <label>Trang  </label>
+                        <input type="text" style="width: 40px; height: 15px; margin-left: 10px; " placeholder="1">
+                        <label style="margin-left: 10px;">trên</label>
+                    </div>
+                    <div class="page-next">
+                        <img  src="../../content/img/grid/page-next.png" style="margin-left: 30px;cursor: pointer;">
+                    </div>
+                    <div class="page-last">
+                        <img src="../../content/img/grid/page-last.png" style="margin-left: 20px; cursor: pointer;">
+
+                    </div>
+                    <div class="refresh">
+                        <img src="../../content/img/grid/refresh.png" style="margin-left: 20px;cursor: pointer;">
+                    </div>
+                    <div class="select-page">
+                        <input type="number" style="width: 40px; height: 15px; margin-left: 20px;">
+                    </div>
                 </div>
             </div>
             
@@ -186,18 +204,27 @@
         <div class="dialog-modal"></div>
         <div class="dialog">
             <div class="dialog-titlebar">
-                <div class="title">Khách hàng</div>
+                <div class="title">Nhân viên</div>
                 <div id="btnCloseX" class="btn-close">x</div>
             </div>
             <div class="dialog-body">
                 <div class="row"> 
-                    <label>Tên khách hàng  <span style="color: brown;">(*)</span></label>
+                    <label>Tên nhân viên <span style="color: brown;">(*)</span></label>
                     <input id="txtCustomerName" type="text">
                     
                 </div>
                 <div class="row">
-                    <label>Mã Khách hàng  <span style="color: brown;">(*)</span></label>
+                    <label>Mã nhân viên <span style="color: brown;">(*)</span></label>
                     <input id="txtCustomerCode" type="text">
+                </div>
+                <div class="row">
+                    <label>Giới tính</label>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+                        <input type="radio" id="other" name="gender" value="other">
+                        <label for="other">Other</label>                  
                 </div>
                 <div class="row"> 
                     <label>Ngày sinh</label>
@@ -208,15 +235,33 @@
                     <input id="txtMobile" type="text">
                 </div>
                 <div class="row"> 
-                    <label>Số tiền nợ</label>
-                    <input id="txtDebiAmount" type="text">
+                    <label>Email</label>
+                    <input id="txtEmail" type="email">
                 </div>
                 <div class="row"> 
-                    <label>Thành viên 5Food</label>
-                    <input id="check5Food" type="checkbox">
+                    <label>Lương</label>
+                    <input id="txtSalary" type="text">
+                </div>
+                <div class="row">
+                    <label>Cấp bậc</label>
+                    <select style="width: 148px;">
+                        <option>Fresher</option>
+                        <option>IntenHR</option>
+                        <option>Employee</option>
+                        <option>Maketting</option>
+                        <option>Security</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <label>Tình trang công việc</label>
+                    <select style="width: 148px;">
+                        <option>Đang làm việc</option>
+                        <option>Bảo lưu</option>
+                        <option>Đã nghỉ việc</option>
+                        <option>Công tác nước ngoài</option>                     
+                    </select>
                 </div>
                 <br>
-                
                 <div class="dialog-footer">
                     <div class="footer-left">
                         <button class="btn-dialog">
@@ -247,6 +292,7 @@
     
     <script src="../../js/lib/jQuery-3.5.1.min.js"></script>
     <script src="../../js/helps/common.js"></script>
+    <script src="../../js/helps/base.js"></script>
     <script src="../../js/page/employee.js"></script>
     
     

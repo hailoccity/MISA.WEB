@@ -99,3 +99,10 @@
     cursor: pointer;
     background-color: #0973b9;
 }
+.content .footter{
+    display: flex;
+    width: 100%;
+    height: 20px;
+    background-color: #e7ebe5;
+    border: 1px solid rgb(167, 159, 167);
+}

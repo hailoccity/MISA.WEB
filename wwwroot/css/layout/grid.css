@@ -19,17 +19,18 @@ table thead{
 table tr td{
     padding: 2px 4px;
     border: 1px solid #ccc;
+   
 
 }
+table tr td.left{
+    text-align: left;
+}
+table tr td.right{
+    text-align:center ;
+}
 table tr:hover{
-    background-color: rgb(120, 184, 236);
+    background-color: rgb(113, 184, 241);
 }
 table tr:hover{
     background-color: rgb(89, 99, 238);
-}
-.text-center{
-    text-align:center ;
-}
-.text-left{
-    text-align: left;
 }
